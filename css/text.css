@@ -1,0 +1,10 @@
+@font-face {
+   font-family: raleway-light;
+   src: url("../utils/fonts/Raleway-Thin.ttf");
+}
+
+.text-standard{
+
+  font-family: arial;
+  font-size: 15px;
+}

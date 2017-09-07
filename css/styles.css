@@ -1,0 +1,30 @@
+#btn-modal{
+
+  display: none;
+}
+
+.btn-outline-danger {
+
+    background-color: transparent;
+    color: #8b000c;
+    border: 1px solid #8b000c;
+    transition: all .5s;
+}
+
+.btn-outline-danger:hover {
+
+    background-color: #8b000c;
+    color: white;
+    opacity: 0.8;
+}
+
+.image{
+
+  width:100%;
+}
+
+.bottom{
+
+  position: absolute;
+  bottom: 0;
+}
