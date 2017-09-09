@@ -1,0 +1,66 @@
+.modal {
+  overflow-y:auto;
+}
+
+.modal-dialog-fullscreen {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+.modal-content-fullscreen {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+#imagepreview, .gallery{
+
+  border: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+.btn-next{
+
+  background-image: url("../images/icons/right-arrow-sm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  height: 50px;
+  width: 50px;
+}
+
+.btn-prev{
+
+  background-image: url("../images/icons/left-arrow-sm.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  height: 50px;
+  width: 50px;
+}
+
+.btn-expand{
+
+  background-image: url("../images/icons/expand-arrows.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  height: 50px;
+  width: 50px;
+}
+
+.btn-next:hover{
+  background-image: url("../images/icons/right-arrow-hover-sm.png");
+}
+
+.btn-prev:hover{
+  background-image: url("../images/icons/left-arrow-hover-sm.png");
+}
+
+.btn-expand:hover{
+  background-image: url("../images/icons/expand-arrows-hover.png");
+}

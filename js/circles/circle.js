@@ -11,7 +11,7 @@ function Circle(amplitude, title, childNode, color){
 
   this.mass = 5 * this.radius;
   this.amplitude = amplitude;
-  this.angle = 0.0;
+  this.angle = random(0, 180);
   this.angularVelocity = 0;
   this.velocityLimit = random(0.005, 0.008);
   this.angularAcceleration = 0.000001 * this.mass;
@@ -44,7 +44,7 @@ Circle.prototype.display = function(){
 
 Circle.prototype.displayLine = function(){
 
-  stroke(100);
+  stroke(150);
   strokeWeight(0.5);
 
   var lineEnd = this.getLineEndPoint();
@@ -63,6 +63,8 @@ Circle.prototype.displayEllipse = function(){
   }
 
   ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
+  /*imageMode(CENTER);
+  image(img, this.x, this.y, this.radius * 2, this.radius * 2);*/
 }
 
 Circle.prototype.updateOpacity = function(){
@@ -183,7 +185,7 @@ Circle.prototype.isClicked = function(){
 
 Circle.prototype.getRandomRadius = function(){
 
-  return random(10, 30);
+  return random(25, 50);
 }
 
 Circle.prototype.getCirclePosition = function(){

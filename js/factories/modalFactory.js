@@ -4,10 +4,12 @@ function ModalFactory(){
 
 ModalFactory.prototype.createMainModals = function(){
 
-  var modals = [];
+  var modals = {};
 
-  var aboutModal = this.createModal("partialViews/experience-spots2.html");
-  modals.push(aboutModal);
+  var aboutModal = this.createModal("partialViews/main-about.html");
+  var contactModal = this.createModal("partialViews/main-contact.html");
+  modals["about"] = aboutModal;
+  modals["contact"] = contactModal;
 
   return modals;
 }
@@ -29,6 +31,34 @@ ModalFactory.prototype.createProjectModals = function(){
   modals.push(generalModal4);
   modals.push(generalModal5);
   modals.push(generalModal6);
+
+  return modals;
+}
+
+ModalFactory.prototype.createProjectPictureModals = function(){
+
+  var modals = [];
+
+  var generalModal1 = this.createModal("partialViews/project-vipTransport.html");
+  var generalModal2 = this.createModal("partialViews/experience-spots.html");
+
+  modals.push(generalModal1);
+  modals.push(generalModal2);
+
+  return modals;
+}
+
+ModalFactory.prototype.createProjectImageModals = function(){
+
+  var modals = [];
+
+  var generalModal1 = this.createModal("partialViews/project-vipTransport.html");
+  var generalModal2 = this.createModal("partialViews/project-paint.html");
+  var generalModal3 = this.createModal("partialViews/experience-spots.html");
+
+  modals.push(generalModal1);
+  modals.push(generalModal2);
+  modals.push(generalModal3);
 
   return modals;
 }

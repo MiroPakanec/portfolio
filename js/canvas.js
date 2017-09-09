@@ -1,26 +1,22 @@
   var height;
   var width;
-  var input;
+
   var node;
   var canvasEnabled;
+  var iconHandler;
+
+  function preload(){
+
+    iconHandler = new IconHandler();
+  }
 
   function setup(){
 
     canvasEnabled = true;
-
-    touchStarted();
-    input = new Input();
-
     frameRate(30);
+
     setCanvas();
     setNode();
-
-    console.log(input.getX());
-  }
-
-  function touchStarted() {
-    touchX = 0;
-    touchY = 0;
   }
 
   function draw(){

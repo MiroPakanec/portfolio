@@ -221,7 +221,7 @@ Node.prototype.isCircleClicked = function(){
 
     if(circle.isClicked()){
 
-      if(circle instanceof LeafCircle){
+      if(circle instanceof LeafCircle || circle instanceof ImageLeafCircle || circle instanceof PictureLeafCircle){
 
         circle.openDescription();
         return;

@@ -10,6 +10,7 @@ inherits(CircleStyle, Style);
 CircleStyle.prototype.display = function(){
 
   fill(this.color[0], this.color[1], this.color[2], this.opacity);
+  //tint(this.color[0], this.color[1], this.color[2], this.opacity);
   noStroke();
 }
 
@@ -18,6 +19,7 @@ CircleStyle.prototype.displayHovered = function(){
   var hoverOpacity = this.opacity + 50;
 
   fill(this.color[0], this.color[1], this.color[2], hoverOpacity);
+  //tint(this.color[0], this.color[1], this.color[2], hoverOpacity);
   noStroke();
 }
 

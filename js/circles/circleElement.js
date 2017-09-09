@@ -3,7 +3,7 @@ function CircleElement(position, type, value, radius){
   CircleElement.super_.call(this, position, type, value);
 
   this.hide();
-  this.margin = radius + 20;
+  this.margin = radius + 30;
   //this.opacity = 0;
 }
 

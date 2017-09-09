@@ -23,8 +23,20 @@
   width:100%;
 }
 
+.image-center{
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
 .bottom{
 
   position: absolute;
   bottom: 0;
 }
+
+.dark{ background-color: #dedede;}
+.light{ background-color: #fefefe;}
+.white{background-color: #fff;}
+
+.transparent{ opacity: 0.8;}
