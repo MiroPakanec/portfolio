@@ -25,5 +25,5 @@ PictureCircle.prototype.displayEllipse = function(){
 
 PictureCircle.prototype.getRandomRadius = function(){
 
-  return random(35, 50);
+  return random(30, 40);
 }

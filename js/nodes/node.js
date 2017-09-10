@@ -92,7 +92,7 @@ Node.prototype.displayStageZero = function(){
 
 Node.prototype.displayStageOne = function(){
 
-  this.displayNode(false);
+  this.displayNode(true);
   this.updateAll(true);
 
   this.wasCircleClicked = false;
@@ -103,7 +103,7 @@ Node.prototype.displayStageOne = function(){
 
 Node.prototype.displayStageTwo = function(){
 
-  this.displayNode(false);
+  this.displayNode(true);
   this.updateAll(true);
 }
 

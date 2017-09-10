@@ -52,9 +52,9 @@ ModalFactory.prototype.createProjectImageModals = function(){
 
   var modals = [];
 
-  var generalModal1 = this.createModal("partialViews/project-vipTransport.html");
+  var generalModal1 = this.createModal("partialViews/project-gtl.html");
   var generalModal2 = this.createModal("partialViews/project-paint.html");
-  var generalModal3 = this.createModal("partialViews/experience-spots.html");
+  var generalModal3 = this.createModal("partialViews/project-eflats.html");
 
   modals.push(generalModal1);
   modals.push(generalModal2);

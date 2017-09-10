@@ -9,6 +9,11 @@
   font-size: 15px;
 }
 
+.text-node{
+
+  font-size: 12px;
+}
+
 .indent{text-indent: 30px;}
 
 ul {
