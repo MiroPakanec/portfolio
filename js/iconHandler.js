@@ -17,7 +17,12 @@ IconHandler.prototype.setup = function(){
   this.images["gtl"] = loadImage("images/glyph/opt/gtl.png");
   this.images["paint"] = loadImage("images/glyph/opt/paint.png");
   this.images["eflats"] = loadImage("images/glyph/opt/eflats.png");
-
+  this.images["siemens"] = loadImage("images/glyph/opt/siemens.png");
+  this.images["nextstep"] = loadImage("images/glyph/opt/nextstep.png");
+  this.images["cs"] = loadImage("images/glyph/opt/cs.png");
+  this.images["electronics"] = loadImage("images/glyph/opt/electronics.png");
+  this.images["software"] = loadImage("images/glyph/opt/software.png");
+  this.images["highschool"] = loadImage("images/glyph/opt/highschool.png");
 }
 
 IconHandler.prototype.get = function(key){

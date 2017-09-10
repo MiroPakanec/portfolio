@@ -119,7 +119,7 @@ Circle.prototype.orbit = function(){
   var limit = this.getVelocityLimit();
 
   this.angularVelocity += this.angularAcceleration * 100000;
-  this.angularVelocity = constrain(this.angularVelocity, 0.001, limit);
+  this.angularVelocity = constrain(this.angularVelocity, limit / 10, limit);
   this.angle += this.angularVelocity;
 
   this.x = this.amplitude * cos(this.angle);

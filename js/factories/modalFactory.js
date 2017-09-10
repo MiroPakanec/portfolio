@@ -14,33 +14,12 @@ ModalFactory.prototype.createMainModals = function(){
   return modals;
 }
 
-ModalFactory.prototype.createProjectModals = function(){
-
-  var modals = [];
-
-  var generalModal1 = this.createModal("partialViews/experience-spots.html");
-  var generalModal2 = this.createModal("partialViews/experience-spots.html");
-  var generalModal3 = this.createModal("partialViews/experience-spots.html");
-  var generalModal4 = this.createModal("partialViews/experience-spots.html");
-  var generalModal5 = this.createModal("partialViews/experience-spots.html");
-  var generalModal6 = this.createModal("partialViews/experience-spots.html");
-
-  modals.push(generalModal1);
-  modals.push(generalModal2);
-  modals.push(generalModal3);
-  modals.push(generalModal4);
-  modals.push(generalModal5);
-  modals.push(generalModal6);
-
-  return modals;
-}
-
 ModalFactory.prototype.createProjectPictureModals = function(){
 
   var modals = [];
 
   var generalModal1 = this.createModal("partialViews/project-vipTransport.html");
-  var generalModal2 = this.createModal("partialViews/experience-spots.html");
+  var generalModal2 = this.createModal("partialViews/project-spots.html");
 
   modals.push(generalModal1);
   modals.push(generalModal2);
@@ -67,10 +46,10 @@ ModalFactory.prototype.createEducationModals = function(){
 
   var modals = [];
 
-  var generalModal1 = this.createModal("partialViews/experience-spots.html");
-  var generalModal2 = this.createModal("partialViews/experience-spots.html");
-  var generalModal3 = this.createModal("partialViews/experience-spots.html");
-  var generalModal4 = this.createModal("partialViews/experience-spots.html");
+  var generalModal1 = this.createModal("partialViews/education-highschool.html");
+  var generalModal2 = this.createModal("partialViews/education-electronics.html");
+  var generalModal3 = this.createModal("partialViews/education-cs.html");
+  var generalModal4 = this.createModal("partialViews/education-sd.html");
 
   modals.push(generalModal1);
   modals.push(generalModal2);
@@ -87,11 +66,9 @@ ModalFactory.prototype.createExperienceModals = function(){
 
   var generalModal1 = this.createModal("partialViews/experience-siemense.html");
   var generalModal2 = this.createModal("partialViews/experience-spots.html");
-  var generalModal3 = this.createModal("partialViews/experience-spots.html");
+  var generalModal3 = this.createModal("partialViews/experience-nextstep.html");
 
-  modals.push(generalModal1);
-  modals.push(generalModal2);
-  modals.push(generalModal3);
+  modals.push(generalModal1, generalModal2, generalModal3);
 
   return modals;
 }
