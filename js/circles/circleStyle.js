@@ -9,18 +9,21 @@ inherits(CircleStyle, Style);
 
 CircleStyle.prototype.display = function(){
 
+  var strokeOpacity = map(this.opacity, 0, 150, 0, 255);
+
   fill(this.color[0], this.color[1], this.color[2], this.opacity);
-  //tint(this.color[0], this.color[1], this.color[2], this.opacity);
-  noStroke();
+  stroke(this.color[0], this.color[1], this.color[2], strokeOpacity);
+  strokeWeight(1);
 }
 
 CircleStyle.prototype.displayHovered = function(){
 
+  var strokeOpacity = map(this.opacity, 0, this.maxOpacity, 0, 255);
   var hoverOpacity = this.opacity + 50;
 
   fill(this.color[0], this.color[1], this.color[2], hoverOpacity);
-  //tint(this.color[0], this.color[1], this.color[2], hoverOpacity);
-  noStroke();
+  stroke(this.color[0], this.color[1], this.color[2], strokeOpacity);
+  strokeWeight(1);
 }
 
 CircleStyle.prototype.fadeIn = function(speed){

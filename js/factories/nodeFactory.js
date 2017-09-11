@@ -12,6 +12,15 @@ NodeFactory.prototype.createProjectNode = function(rootNode){
   return node;
 }
 
+NodeFactory.prototype.createProjectNodeOptimized = function(rootNode){
+
+  var circles = this.circleFactory.createProjectCirclesOptimized(rootNode);
+  var node = this.createNode("Projects", circles);
+
+  node.addCircles(circles);
+  return node;
+}
+
 NodeFactory.prototype.createEducationNode = function(rootNode){
 
   var circles = this.circleFactory.createEducationCircles(rootNode);
@@ -21,10 +30,28 @@ NodeFactory.prototype.createEducationNode = function(rootNode){
   return node;
 }
 
+NodeFactory.prototype.createEducationNodeOptimized = function(rootNode){
+
+  var circles = this.circleFactory.createEducationCirclesOptimized(rootNode);
+  var node = this.createNode("Education", circles);
+
+  node.addCircles(circles);
+  return node;
+}
+
 NodeFactory.prototype.createExperienceNode = function(rootNode){
 
   var circles = this.circleFactory.createExperienceCircles(rootNode);
-  var node = this.createNode("Working experience", circles);
+  var node = this.createNode("Work experience", circles);
+
+  node.addCircles(circles);
+  return node;
+}
+
+NodeFactory.prototype.createExperienceNodeOptimized = function(rootNode){
+
+  var circles = this.circleFactory.createExperienceCirclesOptimized(rootNode);
+  var node = this.createNode("Work experience", circles);
 
   node.addCircles(circles);
   return node;

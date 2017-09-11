@@ -6,6 +6,9 @@ function Element(position, type, value){
   this.setValue(value);
   this.setPosition(position.x, position.y);
 
+  this.element.style("font-size", "1.8vh");
+  this.element.style("font-weight", "100");
+
   this.defaultMargin = 50;
 }
 

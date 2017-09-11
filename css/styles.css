@@ -51,6 +51,7 @@ body{
 .white{background-color: #fff;}
 
 .border-bottom-dark{border-bottom: 1px solid rgb(150,150,150);}
+.border-top-dark{border-top: 1px solid rgb(150,150,150);}
 
 .isHidden{display: none;}
 .transparent{ opacity: 0.8;}

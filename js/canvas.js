@@ -4,12 +4,15 @@
 
   var node;
   var canvasEnabled;
+
   var iconHandler;
+  var deviceHandler;
 
   var cvs;
 
   function preload(){
 
+    deviceHandler =  new DeviceHandler();
     iconHandler = new IconHandler();
   }
 
@@ -71,6 +74,14 @@
   function setNode(){
 
     var nodeTreeFactory = new NodeTreeFactory();
+
+    if(deviceHandler.isMobile()){
+
+      $(".footer").removeClass("isHidden");
+      node = nodeTreeFactory.createOptimized();
+      return;
+    }
+
     node = nodeTreeFactory.create();
   }
 

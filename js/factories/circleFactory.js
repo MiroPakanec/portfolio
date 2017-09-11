@@ -19,7 +19,7 @@ CircleFactory.prototype.createMainCircles = function(childNodes, backNode){
   var leafPictureAmplitudes = amplitudes.slice(3, 4);
   var leafImageAmplitudes = amplitudes.slice(4, amplitudes.length);
 
-  var modals = this.modalFactory.createMainModals();
+  var modals = this.modalFactory.createMainModalsDictionary();
   var aboutModal = [modals["about"]];
   var contactModel = [modals["contact"]];
 
@@ -30,6 +30,25 @@ CircleFactory.prototype.createMainCircles = function(childNodes, backNode){
   var circles = circles.concat(leafPictureCircles);
   var circles = circles.concat(leafImageCircles);
 
+  return circles;
+}
+
+CircleFactory.prototype.createMainCirclesOptimized = function(childNodes, backNode){
+
+  var color = [240, 175, 175];
+  var titles = ["Projects", "Education", "Work Experience"];
+  var leafTitles = ["About", "Contact"];
+
+  var amplitudes = this.getAmplitudes(5);
+  var circleAmplitudes = amplitudes.slice(0, 3);
+  var leafAmplitudes = amplitudes.slice(3, amplitudes.length);
+
+  var modals = this.modalFactory.createMainModals();
+
+  var circles = this.createCircles(titles, childNodes, circleAmplitudes, color);
+  var leafcircles = this.createLeafCircles(leafTitles, [], leafAmplitudes, color, modals);
+
+  var circles = circles.concat(leafcircles);
   return circles;
 }
 
@@ -59,6 +78,25 @@ CircleFactory.prototype.createProjectCircles = function(backNode){
   return circles;
 }
 
+CircleFactory.prototype.createProjectCirclesOptimized = function(backNode){
+
+  var titles = ["VIPTransport", "Spots", "Georgia Tech Library", "Paint", "E-Flats"];
+  var color = [215, 177, 200];
+  var nodes = [];
+
+  var amplitudes = this.getAmplitudes(5);
+
+  var imageModals = this.modalFactory.createProjectImageModals();
+  var pictureModals = this.modalFactory.createProjectPictureModals();
+  var modals = pictureModals.concat(imageModals);
+
+  var circles = this.createLeafCircles(titles, nodes, amplitudes, color, modals);
+  var backCircle = this.createBackCircle(backNode);
+
+  circles.push(backCircle);
+  return circles;
+}
+
 CircleFactory.prototype.createEducationCircles = function(backNode){
 
   var titles = ["Highschool", "Networks & Electronics", "Computer Science", "Software development"];
@@ -76,9 +114,25 @@ CircleFactory.prototype.createEducationCircles = function(backNode){
   return circles;
 }
 
+CircleFactory.prototype.createEducationCirclesOptimized = function(backNode){
+
+  var titles = ["Highschool", "Networks & Electronics", "Computer Science", "Software development"];
+  var nodes = [];
+  var amplitudes = this.getAmplitudes(4);
+  var color = [56, 214, 165];
+
+  var modals = this.modalFactory.createEducationModals();
+
+  var circles = this.createLeafCircles(titles, nodes, amplitudes, color, modals);
+  var backCircle = this.createBackCircle(backNode);
+
+  circles.push(backCircle);
+  return circles;
+}
+
 CircleFactory.prototype.createExperienceCircles = function(backNode){
 
-  var titles = ["Siemencs Healthcare", "Spots IVS", "UCN Next step"];
+  var titles = ["Siemens Healthcare", "Spots IVS", "UCN Next step"];
   var color = [138, 37, 182];
   var nodes = [];
   var amplitudes = this.getAmplitudes(3);
@@ -87,6 +141,22 @@ CircleFactory.prototype.createExperienceCircles = function(backNode){
   var pictureModals = this.modalFactory.createExperienceModals();
 
   var circles = this.createLeafPictureCircles(titles, nodes, amplitudes, pictureModals, pictures);
+  var backCircle = this.createBackCircle(backNode);
+
+  circles.push(backCircle);
+  return circles;
+}
+
+CircleFactory.prototype.createExperienceCirclesOptimized = function(backNode){
+
+  var titles = ["Siemens Healthcare", "Spots IVS", "UCN Next step"];
+  var color = [215, 177, 200];
+  var nodes = [];
+  var amplitudes = this.getAmplitudes(3);
+
+  var modals = this.modalFactory.createExperienceModals();
+
+  var circles = this.createLeafCircles(titles, nodes, amplitudes, color, modals);
   var backCircle = this.createBackCircle(backNode);
 
   circles.push(backCircle);

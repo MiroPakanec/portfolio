@@ -16,6 +16,12 @@
   color: rgba(100,100,100, 0.7);
 }
 
+.text-footer{
+
+  font-size: 35px;
+  color: rgba(100,100,100, 0.8);
+}
+
 .text-subheader{
 
   font-family: raleway-light;

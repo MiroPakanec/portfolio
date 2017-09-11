@@ -63,8 +63,6 @@ Circle.prototype.displayEllipse = function(){
   }
 
   ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
-  /*imageMode(CENTER);
-  image(img, this.x, this.y, this.radius * 2, this.radius * 2);*/
 }
 
 Circle.prototype.updateOpacity = function(){

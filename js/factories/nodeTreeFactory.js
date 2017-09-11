@@ -20,6 +20,22 @@ NodeTreeFactory.prototype.create = function(){
   return rootNode;
 }
 
+NodeTreeFactory.prototype.createOptimized = function(){
+
+  var rootNode = this.nodeFactory.createRootNode();
+  var projectNode = this.nodeFactory.createProjectNodeOptimized(rootNode);
+  var educationNode = this.nodeFactory.createEducationNodeOptimized(rootNode);
+  var experienceNode = this.nodeFactory.createExperienceNodeOptimized(rootNode);
+
+  var nodeArray = [projectNode, educationNode, experienceNode];
+  var mainCircles = this.circleFactory.createMainCirclesOptimized(nodeArray ,null);
+
+  rootNode.addCircles(mainCircles);
+  rootNode.title.display();
+
+  return rootNode;
+}
+
 NodeTreeFactory.prototype.createTest = function(){
 
   var rootNode = this.nodeFactory.createRootNode();

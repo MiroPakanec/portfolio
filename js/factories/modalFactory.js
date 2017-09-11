@@ -2,7 +2,7 @@ function ModalFactory(){
 
 }
 
-ModalFactory.prototype.createMainModals = function(){
+ModalFactory.prototype.createMainModalsDictionary = function(){
 
   var modals = {};
 
@@ -14,15 +14,28 @@ ModalFactory.prototype.createMainModals = function(){
   return modals;
 }
 
+ModalFactory.prototype.createMainModals = function(){
+
+  var modals = [];
+
+  var modal1 = this.createModal("partialViews/main-about.html");
+  var modal2 = this.createModal("partialViews/main-contact.html");
+
+  modals.push(modal1);
+  modals.push(modal2);
+
+  return modals;
+}
+
 ModalFactory.prototype.createProjectPictureModals = function(){
 
   var modals = [];
 
-  var generalModal1 = this.createModal("partialViews/project-vipTransport.html");
-  var generalModal2 = this.createModal("partialViews/project-spots.html");
+  var modal1 = this.createModal("partialViews/project-vipTransport.html");
+  var modal2 = this.createModal("partialViews/project-spots.html");
 
-  modals.push(generalModal1);
-  modals.push(generalModal2);
+  modals.push(modal1);
+  modals.push(modal2);
 
   return modals;
 }
