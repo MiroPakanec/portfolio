@@ -1,9 +1,12 @@
   var height;
   var width;
+  var contHeight;
 
   var node;
   var canvasEnabled;
   var iconHandler;
+
+  var cvs;
 
   function preload(){
 
@@ -13,6 +16,7 @@
   function setup(){
 
     canvasEnabled = true;
+    setContHeight();
     frameRate(30);
 
     setCanvas();
@@ -21,11 +25,28 @@
 
   function draw(){
 
-    background(235);
+    setBackground();
 
     swtichNodes();
     node.update();
     node.display();
+  }
+
+  function setBackground(){
+
+    background(235);
+
+    noFill();
+    stroke(150,150,150);
+    strokeWeight(0.3);
+    var min = Math.min(width, height);
+    var diameter = min/100 * 90;
+    ellipse(width/2, height/2, diameter, diameter);
+  }
+
+  function setContHeight(){
+
+    contHeight = $(".container").height();
   }
 
   function swtichNodes(){
@@ -34,15 +55,17 @@
 
       node = node.getNextNode();
       node.title.display();
+      resize();
     }
   }
 
   function setCanvas(){
 
-    height = $(window).height();
+    height = $(window).height() - (contHeight / 100 * 150);
     width = $(window).width();
 
-    createCanvas(width, height);
+    cvs = createCanvas(width, height);
+    cvs.parent("canvas");
   }
 
   function setNode(){
@@ -55,4 +78,5 @@
 
     var position = createVector(width/2, height/2);
     node.resize(position);
+    setContHeight();
   }

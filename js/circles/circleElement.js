@@ -19,7 +19,7 @@ CircleElement.prototype.display = function(screenCenterPoint, circleCenterPoint)
   var elementWidth = this.element.style("width").slice(0, -2);
 
   var x = centerPointsVector.x - elementWidth /2;
-  var y = centerPointsVector.y - this.margin;
+  var y = centerPointsVector.y - this.margin + contHeight;
 
   //this.element.style("color", "rgba(100,100,100, "+opacity+")");
   this.element.show();

@@ -65,9 +65,15 @@ Node.prototype.getStageValue = function(){
 Node.prototype.resize = function(newPosition){
 
   this.position.set(newPosition);
+  var amplitudes = this.getAmplitudes(this.circles.length);
+  var index = 0;
 
   this.circles.forEach(function(circle){
 
+    var amplitude = amplitudes[index];
+    index++;
+
+    circle.amplitude = amplitude;
     circle.position.set(newPosition);
     circle.defaultPosition.set(newPosition);
 
@@ -234,4 +240,25 @@ Node.prototype.isCircleClicked = function(){
   });
 
   return clicked;
+}
+
+Node.prototype.getAmplitudes = function(amount){
+
+  var amplitudes = [];
+  var availableAmplitude = this.getMaxAmplitude(75);
+  var skip = availableAmplitude / amount;
+
+  for (var i = 0; i < amount; i++) {
+
+    var amplitude = skip * (i + 1);
+    amplitudes.push(amplitude);
+  }
+
+  return amplitudes;
+}
+
+Node.prototype.getMaxAmplitude = function(amplitudePercent){
+
+  var min = Math.min(height, width);
+  return ((min / 2) / 100) * amplitudePercent;
 }

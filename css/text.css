@@ -1,12 +1,26 @@
 @font-face {
    font-family: raleway-light;
-   src: url("../utils/fonts/Raleway-Thin.ttf");
+   src: url("fonts/Raleway-Thin.ttf");
 }
 
 .text-standard{
 
   font-family: arial;
   font-size: 15px;
+}
+
+.text-header{
+
+  font-family: raleway-light;
+  font-size: 7vw;
+  color: rgba(100,100,100, 0.7);
+}
+
+.text-subheader{
+
+  font-family: raleway-light;
+  font-size: 3vw;
+  color: rgba(100,100,100, 0.7);
 }
 
 .text-node{

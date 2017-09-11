@@ -230,14 +230,14 @@ CircleFactory.prototype.createLeafPictureCircle = function(amplitude, title, nod
 
 CircleFactory.prototype.createBackCircle = function(node){
 
-  var amplitude = random(this.getMaxAmplitude(80), this.getMaxAmplitude(90));
+  var amplitude = random(this.getMaxAmplitude(80), this.getMaxAmplitude(85));
   return new BackCircle(amplitude, "back", node, [100, 100, 100]);
 }
 
 CircleFactory.prototype.getAmplitudes = function(amount){
 
   var amplitudes = [];
-  var availableAmplitude = this.getMaxAmplitude(70);
+  var availableAmplitude = this.getMaxAmplitude(75);
   var skip = availableAmplitude / amount;
 
   for (var i = 0; i < amount; i++) {

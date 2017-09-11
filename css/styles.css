@@ -1,3 +1,14 @@
+body{
+
+  background-color: rgb(235,235,235);
+}
+
+#canvas{
+
+  height: 100%;
+  width: 100%;
+}
+
 #btn-modal{
 
   display: none;
@@ -39,4 +50,7 @@
 .light{ background-color: #fefefe;}
 .white{background-color: #fff;}
 
+.border-bottom-dark{border-bottom: 1px solid rgb(150,150,150);}
+
+.isHidden{display: none;}
 .transparent{ opacity: 0.8;}

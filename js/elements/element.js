@@ -28,7 +28,7 @@ Element.prototype.update = function(position){
 Element.prototype.setPosition = function(x, y){
 
   this.x = x - 50;
-  this.y = y - this.defaultMargin;
+  this.y = y - this.defaultMargin + contHeight;
 }
 
 Element.prototype.getId = function(){
